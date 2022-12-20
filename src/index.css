@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(../public/resource/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* body{
+  
+} */
+
+.project-desc::-webkit-scrollbar {
+  display: none;
+}
+
+.projects::-webkit-scrollbar {
+  display: none;
+}
+
+.project-pic{
+  position: relative;
+}
+.project-pic::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: rgba(0, 1, 3, 0.5);
+  z-index: 100;
 }
