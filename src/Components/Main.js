@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar.js";
-import * as Icons from "react-icons/fa";
-import * as Iconsmd from "react-icons/md";
 import { Outlet, useLocation } from "react-router-dom";
 
-const Main = () => {
+const Main = ({Icons, Iconsmd}) => {
 
   const subElements = (
     <>
@@ -120,7 +118,7 @@ const Main = () => {
           </div>
         </div>
         <div className="right-section w-[100%] flex flex-col lg:gap-[40px] flex-1">
-          <Navbar />
+          <Navbar Icons={Icons} Iconsmd={Iconsmd} />
           <Outlet />
         </div>
       </main>

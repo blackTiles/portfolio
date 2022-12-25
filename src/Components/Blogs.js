@@ -1,7 +1,6 @@
 import React from "react";
-import data from "./UiData.js";
 
-const Blogs = () => {
+const Blogs = ({data}) => {
   return (
     <div class="blogs-section bg-gray-800 w-[100%] px-[10px] sm:px-[50px] py-[50px] lg:pb-[0px] sm:rounded-2xl shadow-lg">
       <div class="intro">

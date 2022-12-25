@@ -1,9 +1,7 @@
 import React from "react";
-import * as Icons from 'react-icons/fa';
-import * as Iconsmd from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({Icons, Iconsmd}) => {
 
   return (
     <div className="flex justify-center lg:justify-end">

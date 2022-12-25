@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import data from './UiData.js'
-import * as Icons from "react-icons/fa"
 import { NavLink, useLocation } from 'react-router-dom';
 
-const Projects = () => {
+const Projects = ({Icons, data}) => {
 
    let location = useLocation();
    const [projectData, setProjectData] = useState(data.projects);

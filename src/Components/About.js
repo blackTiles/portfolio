@@ -1,8 +1,6 @@
 import React from "react";
-import * as Icons from "react-icons/fa";
-import * as Iconsai from "react-icons/ai";
 
-const About = () => {
+const About = ({Icons, Iconsai}) => {
   return (
     <div className="skills-section bg-gray-800 w-[100%] px-[10px] sm:px-[50px] py-[50px] sm:rounded-2xl shadow-lg">
       <div className="intro">
