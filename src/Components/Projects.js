@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import data from './UiData.js'
 import * as Icons from "react-icons/fa"
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Projects = () => {
+
+   let location = useLocation();
+   const [projectData, setProjectData] = useState(data.projects);
+
+   function changeProjectData(d){
+      const projectArray = []
+      if(d === "All"){
+         setProjectData(data.projects)
+         console.log(data.projects);
+      }
+      else{
+         data.projects.filter((proj)=>{
+            if(proj.category === d){
+               projectArray.push(proj);
+            }
+         })
+         setProjectData(projectArray);
+      }
+   
+   }
+
    return (
       <div className="projects-section bg-gray-800 w-[100%] px-[10px] sm:px-[50px] py-[50px] lg:pb-[0px] sm:rounded-2xl shadow-lg">
          <div className="intro">
@@ -13,24 +35,24 @@ const Projects = () => {
             </div>
          </div>
          <div className="flex flex-col gap-[15px] mt-[30px]">
-            <div className="projects-navbar flex justify-center items-center gap-[20px] text-white lg:text-[20px] mb-[30px]">
+            <div className="projects-navbar flex justify-center items-center gap-[8px] text-white lg:text-[20px] mb-[30px]">
                {
                   data.projectNav.map((nav) => {
                      return (
-                        <a href className="project-nav border-b-2 border-b-sky-500" key={nav.id}>
+                        <NavLink to={`/projects/${nav.navTitle.split(" ").join("")}`} onClick={()=>changeProjectData(nav.navTitle)} className={`project-nav bg-transparent px-[8px] py-[3px] rounded-md ${(location.pathname === "/projects" && nav.navTitle ==="All")? "active":""}`} key={nav.id}>
                            {nav.navTitle}
-                        </a>)
+                        </NavLink>)
                   })
                }
             </div>
             <div className="projects flex justify-center items-center flex-wrap gap-[20px] lg:pb-[50px] lg:h-[600px] lg:overflow-x-hidden lg:overflow-y-scroll">
                {
-                  data.projects.map((project) => {
+                  projectData.map((project) => {
                      return (
                         <div className="project flex flex-col justify-between w-[320px] bg-gradient-to-r from-sky-500 to-indigo-500 rounded-lg shadow-md" key={project.id}>
                            <div className>
                               <div className="project-pic">
-                                 <img className="w-[100%] h-[220px] object-cover rounded-t-lg" src={project.image} alt />
+                                 <img className="w-[100%] h-[220px] object-cover rounded-t-lg" src={project.image} alt={project.projectHeading} />
                               </div>
                               <div className="project-head text-[25px] text-white my-[12px] px-[20px]">
                                  {project.projectHeading}

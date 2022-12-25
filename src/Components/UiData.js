@@ -94,6 +94,7 @@ const data = {
    projects:[
       {
          id:1,
+         category:"Front end",
          image : process.env.PUBLIC_URL + "/resource/shopify1.png",
          projectHeading : "Shopify Homepage",
          projectDescription : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, id.",
@@ -102,6 +103,7 @@ const data = {
       },
       {
          id:2,
+         category:"Front end",
          image : process.env.PUBLIC_URL + "/resource/rode.png",
          projectHeading : "RODE Homepage",
          projectDescription : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, id.",
@@ -110,6 +112,7 @@ const data = {
       },
       {
          id:3,
+         category:"Front end",
          image : process.env.PUBLIC_URL + "/resource/paytm.png",
          projectHeading : "Paytm Homepage",
          projectDescription : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, id.",
@@ -118,6 +121,7 @@ const data = {
       },
       {
          id:4,
+         category:"Front end",
          image : process.env.PUBLIC_URL + "/resource/visual.png",
          projectHeading : "Portfolio Page",
          projectDescription : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, id.",
@@ -126,6 +130,7 @@ const data = {
       },
       {
          id:5,
+         category:"Front end",
          image : process.env.PUBLIC_URL + "/resource/saas.png",
          projectHeading : "SaaS Homepage",
          projectDescription : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, id.",
@@ -134,6 +139,7 @@ const data = {
       },
       {
          id:6,
+         category:"Front end",
          image : process.env.PUBLIC_URL + "/resource/service.png",
          projectHeading : "Business Landing Page",
          projectDescription : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, id.",
@@ -142,6 +148,7 @@ const data = {
       },
       {
          id:7,
+         category:"Front end",
          image : process.env.PUBLIC_URL + "/resource/hosting.png",
          projectHeading : "Hosting Service Page",
          projectDescription : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, id.",
@@ -149,7 +156,8 @@ const data = {
          githubLink : "https://github.com/blackTiles/LIVE-CLASS-PROJECT-11"
       },
       {
-         id:8,         
+         id:8, 
+         category:"Front end",        
          image : process.env.PUBLIC_URL + "/resource/web.png",
          projectHeading : "Web Landing Page",
          projectDescription : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, id.",

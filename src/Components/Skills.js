@@ -17,7 +17,7 @@ const Skills = () => {
                data.skillsData.map((skill) => {
                   return (
                      <div class="skill-box w-[100%] bg-black2 h-[30px] sm:h-[40px]" key={skill.id}>
-                        <div class={`flex items-center justify-between w-[${skill.percentage}] h-full bg-gradient-to-r from-sky-500 to-indigo-500`}>
+                        <div class={`flex items-center justify-between h-full bg-gradient-to-r from-sky-500 to-indigo-500`} style={{width:skill.percentage}}>
                            <div class="skill-name pl-[20px] h-full text-[16px] sm:text-[20px] font-bold text-white grid place-items-center">
                               {skill.skillname}
                            </div>

@@ -14,12 +14,12 @@ function App() {
         <Route path="/" element={<Main />}>
           <Route index element={<About />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<Projects />}>
+            <Route path="/projects/:category" element={<Projects />} />
+          </Route>
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
-        {/* <div className="App">
-        </div> */}
       </Routes>
     </BrowserRouter>
   );
