@@ -94,20 +94,23 @@ const Main = ({Icons, Iconsmd}) => {
             </div>
             <div className="web-links flex gap-[10px] w-full justify-center">
               <a
-                href="#abc"
+                href="https://www.linkedin.com/in/satyam-raj-78034621b"
                 className="cursor-pointer w-[45px] h-[45px] grid place-items-center hover:opacity-75 text-sky-600 bg-black2 rounded-lg text-[20px]"
+                target="_blank" rel="noopener noreferrer"
               >
                 <Icons.FaLinkedinIn />
               </a>
               <a
-                href="#abc"
+                href="https://github.com/blackTiles"
                 className="cursor-pointer w-[45px] h-[45px] grid place-items-center hover:opacity-75 text-gray-200 bg-black2 rounded-lg text-[20px]"
+                target="_blank" rel="noopener noreferrer"
               >
                 <Icons.FaGithub />
               </a>
               <a
-                href="#abc"
+                href="https://www.instagram.com/satyam._66/"
                 className="cursor-pointer w-[45px] h-[45px] grid place-items-center hover:opacity-75 text-fuchsia-500 bg-black2 rounded-lg text-[20px]"
+                target="_blank" rel="noopener noreferrer"
               >
                 <Icons.FaInstagram />
               </a>

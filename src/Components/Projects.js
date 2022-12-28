@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom';
 
 const Projects = ({Icons, data}) => {
@@ -10,7 +10,6 @@ const Projects = ({Icons, data}) => {
       const projectArray = []
       if(d === "All"){
          setProjectData(data.projects)
-         console.log(data.projects);
       }
       else{
          data.projects.filter((proj)=>{
@@ -22,6 +21,10 @@ const Projects = ({Icons, data}) => {
       }
    
    }
+
+   useEffect(()=>{
+      document.title = "Projects | Satyam Raj";
+    },[])
 
    return (
       <div className="projects-section bg-gray-800 w-[100%] px-[10px] sm:px-[50px] py-[50px] lg:pb-[0px] sm:rounded-2xl shadow-lg">
@@ -60,8 +63,8 @@ const Projects = ({Icons, data}) => {
                               </div>
                            </div>
                            <div className="project-links flex justify-between items-center mt-[20px] text-gray-900 gap-[2px]">
-                              <a href={project.liveLink} target="_blank" className="preview text-center w-[50%] text-[30px] bg-white/75 py-[5px] rounded-bl-lg  flex justify-center items-center"><Icons.FaEye /></a>
-                              <a href={project.githubLink} target="_blank" className="github-link text-center w-[50%] text-[30px] bg-white/50 py-[5px] rounded-br-lg flex justify-center items-center"><Icons.FaGithub /></a>
+                              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="preview text-center w-[50%] text-[30px] bg-white/75 py-[5px] rounded-bl-lg  flex justify-center items-center"><Icons.FaEye /></a>
+                              <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="github-link text-center w-[50%] text-[30px] bg-white/50 py-[5px] rounded-br-lg flex justify-center items-center"><Icons.FaGithub /></a>
                            </div>
                         </div>
                      )

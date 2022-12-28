@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 
 const Skills = ({data}) => {
+
+   useEffect(()=>{
+      document.title = "Skills | Satyam Raj";
+    },[])
+
    return (
       <div class="skills-section bg-gray-800 w-[100%] px-[10px] sm:px-[50px] py-[50px] sm:rounded-2xl shadow-lg">
          <div class="intro">

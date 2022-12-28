@@ -1,6 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 const About = ({Icons, Iconsai}) => {
+
+  useEffect(()=>{
+    document.title = "About | Satyam Raj";
+  },[])
+
   return (
     <div className="skills-section bg-gray-800 w-[100%] px-[10px] sm:px-[50px] py-[50px] sm:rounded-2xl shadow-lg">
       <div className="intro">
