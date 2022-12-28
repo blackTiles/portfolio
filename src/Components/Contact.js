@@ -21,10 +21,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_7gyv3vj",
-        "template_pm4gh0a",
+        `${process.env.SERVICE_ID}`,
+        `${process.env.TEMPLATE_ID}`,
         form.current,
-        "IZr2IZd9kZ_I4DnMl"
+        `${process.env.PUBLIC_KEY}`
       )
       .then(
         (result) => {
