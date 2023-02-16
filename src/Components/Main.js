@@ -44,12 +44,12 @@ const Main = ({Icons, Iconsmd}) => {
           </div>
         </div>
       </div>
-      <button className="bg-gradient-to-r from-sky-500 to-indigo-500 hover:opacity-75 text-[20px] w-[210px] rounded-full text-white h-[55px] flex justify-center items-center gap-[10px]">
+      <a href={process.env.PUBLIC_URL + "/resource/Resume.pdf"} download="resume" className="bg-gradient-to-r from-sky-500 to-indigo-500 hover:opacity-75 text-[20px] w-[210px] rounded-full text-white h-[55px] flex justify-center items-center gap-[10px]">
         <span>
           <Icons.FaDownload />
         </span>
         <span>Download CV</span>
-      </button>
+      </a>
     </>
   );
 
