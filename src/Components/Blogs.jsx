@@ -37,7 +37,7 @@ const Blogs = ({data}) => {
                   <div class="project-links flex justify-between items-center mt-[20px] text-gray-900 gap-[2px]">
                     <a href={blog.descriptionLink} target="_blank" rel="noopener noreferrer"
                       class="preview text-center text-sky-800 text-[16px] w-[100%] text-[25px] bg-white/75 py-[5px] rounded-bl-lg rounded-br-lg">Read
-                              More >></a>
+                              {`More >>`}</a>
                   </div>
                 </div>
               )

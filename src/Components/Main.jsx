@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar.js";
+import Navbar from "./Navbar";
 import { Outlet, useLocation } from "react-router-dom";
 
 const Main = ({Icons, Iconsmd}) => {
@@ -13,7 +13,7 @@ const Main = ({Icons, Iconsmd}) => {
           </div>
           <div>
             <div className="label text-gray-500 text-[15px]">Phone</div>
-            <div className="text-white">+91 73198 65341</div>
+            <div className="text-white">+91 76193 54766</div>
           </div>
         </div>
         <div className="email flex items-center gap-[10px] border-b-[1px] border-b-gray-600 py-[10px]">
@@ -44,7 +44,7 @@ const Main = ({Icons, Iconsmd}) => {
           </div>
         </div>
       </div>
-      <a href={process.env.PUBLIC_URL + "/resource/Resume.pdf"} download="resume" className="bg-gradient-to-r from-sky-500 to-indigo-500 hover:opacity-75 text-[20px] w-[210px] rounded-full text-white h-[55px] flex justify-center items-center gap-[10px]">
+      <a href={"/resource/Resume.pdf"} download="resume" className="bg-gradient-to-r from-sky-500 to-indigo-500 hover:opacity-75 text-[20px] w-[210px] rounded-full text-white h-[55px] flex justify-center items-center gap-[10px]">
         <span>
           <Icons.FaDownload />
         </span>
@@ -76,21 +76,21 @@ const Main = ({Icons, Iconsmd}) => {
  
   return (
     <div className="sm:px-[50px] xl:p-[0px] w-[100%] mx-auto transition duration-150 ease-in-out mb-[100px]">
-      <main className="max-w-[1280px] flex flex-col lg:flex-row justify-between items-center sm:gap-[40px] items-center mx-auto mt-[50px]">
+      <main className="max-w-[1280px] flex flex-col lg:flex-row justify-between items-center sm:gap-[40px] mx-auto mt-[50px]">
         <div className={`profile-section relative w-[100%] sm:w-[400px] sm:h-[730px] bg-gray-800 mt-[200px] lg:p-[20px] flex flex-col items-center gap-[30px] rounded-t-3xl sm:rounded-3xl sm:shadow-lg ${(currentUrl !== "/" && windowSize <= 640)?"h-[250px]":"730px"}`}>
           <div className="profile-image w-[180px] h-[180px] lg:w-[240px] lg:h-[240px] -translate-y-[100px] lg:-translate-y-[150px] rounded-3xl">
             <img
               className="w-[180px] h-[180px] lg:w-[240px] lg:h-[240px] rounded-3xl object-cover"
-              src={process.env.PUBLIC_URL + "/resource/me.jpg"}
+              src={"/resource/me.jpg"}
               alt="mypic"
             />
           </div>
-          <div className="-translate-y-[100px] lg:-translate-y-[150px] flex flex flex-col items-center gap-[15px]">
+          <div className="-translate-y-[100px] lg:-translate-y-[150px] flex flex-col items-center gap-[15px]">
             <div className="name text-white text-[35px] font-bold">
               Satyam Raj
             </div>
-            <div className="profession text-grey bg-black2 px-[20px] py-[8px] rounded-lg">
-              Front-End Developer
+            <div className="profession text-grey bg-black2 text-white px-[20px] py-[8px] rounded-lg">
+               Full Stack Developer
             </div>
             <div className="web-links flex gap-[10px] w-full justify-center">
               <a
@@ -108,7 +108,7 @@ const Main = ({Icons, Iconsmd}) => {
                 <Icons.FaGithub />
               </a>
               <a
-                href="https://www.instagram.com/satyam._66/"
+                href="https://www.instagram.com/adam.baba.ji/"
                 className="cursor-pointer w-[45px] h-[45px] grid place-items-center hover:opacity-75 text-fuchsia-500 bg-black2 rounded-lg text-[20px]"
                 target="_blank" rel="noopener noreferrer"
               >

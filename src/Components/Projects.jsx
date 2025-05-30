@@ -48,9 +48,9 @@ const Projects = ({Icons, data}) => {
             </div>
             <div className="projects flex justify-center items-center flex-wrap gap-[20px] lg:pb-[50px] lg:h-[600px] lg:overflow-x-hidden lg:overflow-y-scroll">
                {
-                  projectData.map((project) => {
+                  projectData.map((project, index) => {
                      return (
-                        <div className="project flex flex-col justify-between w-[320px] bg-gradient-to-r from-sky-500 to-indigo-500 rounded-lg shadow-md" key={project.id}>
+                        <div className="project flex flex-col justify-between w-[320px] bg-gradient-to-r from-sky-500 to-indigo-500 rounded-lg shadow-md" key={index}>
                            <div className>
                               <div className="project-pic">
                                  <img className="w-[100%] h-[220px] object-cover rounded-t-lg" src={project.image} alt={project.projectHeading} />
